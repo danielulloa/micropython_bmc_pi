@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <title>hola</title>
+    <style>
+        body {
+            background: #000;
+        }
+
+        .gC {
+            display: grid;
+            grid: repeat(4, 1fr) / 1fr 1fr;
+            grid-template-areas:
+                "p1 p1"
+                "p2 p2"
+                "p3 p3"
+                "p4 p4";
+        }
+
+        .p1,
+        .p2,
+        .p3,
+        .p4 {
+            display: grid;
+            place-self: center center;
+            outline: 3px solid #272727;
+            background: #444;
+            width: auto;
+            margin: 0 auto;
+            grid: 1fr / 1fr 1fr;
+            grid-template-areas: ". bO";
+        }
+
+        .p1 {
+            grid-area: p1;
+        }
+
+        .p2 {
+            grid-area: p2;
+        }
+
+        .p3 {
+            grid-area: p3;
+        }
+
+        .p4 {
+            grid-area: p4;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        .up {
+            background: #2f2f2f;
+            padding: 1em 2.1em 1.1em;
+            border-radius: 3px;
+            margin: 8px;
+            display: inline-block;
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: .85em;
+            text: center;
+            box-shadow: 0em -0.3rem 0em #0000001A inset;
+        }
+
+        .bO {
+            grid-area: bO;
+            place-self: center center;
+        }
+
+        .sW {
+            position: relative;
+            display: inline-block;
+            width: 88px;
+            height: 50px
+        }
+
+        .sW input {
+            display: none
+        }
+
+        .sl {
+            position: absolute;
+            inset: 0;
+            background-color: #ccc;
+            border-radius: 34px
+        }
+
+        .sl:before {
+            position: absolute;
+            content: "";
+            height: 32px;
+            width: 32px;
+            left: 8px;
+            bottom: 8px;
+            background: #fff;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 68px
+        }
+
+        input:checked+.sl {
+            background-color: #2196F3
+        }
+
+        input:checked+.sl:before {
+            -webkit-transform: translateX(42px);
+            -ms-transform: translateX(42px);
+            transform: translateX(42px)
+        }
+    </style>
+    <script>
+        function tC(element) {
+            var xhr = new XMLHttpRequest();
+            if (element.checked) {
+                xhr.open("GET", "/?r" + element.id + "=1", true);
+            } else {
+                xhr.open("GET", "/?r" + element.id + "=0", true);
+            }
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="gC">
+        <div class="p1">
+            <h1 class="up">Pi1</h1>
+            <div class="bO"> <label class="sW"><input type="checkbox" onchange="tC(this)" id="1" %s><span
+                        class="sl"></span></label></div>
+        </div>
+        <div class="p2">
+            <h1 class="up">Pi2</h1>
+            <div class="bO"> <label class="sW"><input type="checkbox" onchange="tC(this)" id="2" %s><span
+                        class="sl"></span></label></div>
+        </div>
+        <div class="p3">
+            <h1 class="up">Pi3</h1>
+            <div class="bO"> <label class="sW"><input type="checkbox" onchange="tC(this)" id="3" %s><span
+                        class="sl"></span></label></div>
+        </div>
+        <div class="p4">
+            <h1 class="up">Pi4</h1>
+            <div class="bO"> <label class="sW"><input type="checkbox" onchange="tC(this)" id="4" %s><span
+                        class="sl"></span></label></div>
+        </div>
+    </div>
+</body>
+
+
+</html>

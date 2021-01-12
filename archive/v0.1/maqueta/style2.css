@@ -1,0 +1,109 @@
+body {
+    background-color: #000;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "PI-1 PI-1 PI-1 PI-1"
+        "PI-2 PI-2 PI-2 PI-2"
+        "PI-3 PI-3 PI-3 PI-3"
+        "PI-4 PI-4 PI-4 PI-4";
+}
+
+.PI-1,
+.PI-2,
+.PI-3,
+.PI-4 {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    outline: 3px solid #272927;
+    background-color: #444;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". button_ON button_OFF";
+}
+
+.PI-1 {
+    grid-area: PI-1;
+}
+
+.PI-2 {
+    grid-area: PI-2;
+}
+
+.PI-3 {
+    grid-area: PI-3;
+}
+
+.PI-4 {
+    grid-area: PI-4;
+}
+
+.button_ON {
+    grid-area: button_ON;
+    align-self: center;
+    justify-self: center;
+}
+
+.button_OFF {
+    grid-area: button_OFF;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+h1 {
+    color: #fff;
+}
+
+.btn,
+.up,
+.down {
+    padding: 1em 2.1em 1.1em;
+    border-radius: 3px;
+    margin: 8px 8px 8px 8px;
+    color: #fbdedb;
+    background-color: #fbdedb;
+    display: inline-block;
+    background: #e74c3c;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: .85em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+    position: relative;
+}
+
+.up {
+    color: green;
+    background-color: rgb(47, 47, 47);
+
+}
+
+.down {
+    color: red;
+    background-color: rgb(47, 47, 47);
+}
+
+/* Colours */
+.red {
+    background-color: #d55050;
+}
+
+.green {
+    background-color: #5bbd72;
+}
